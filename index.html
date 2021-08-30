@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematical Dictionary</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="mainHeader">
+      <div class="container">
+        <div class="row">
+        <div class="col-md-10">
+          <h2 class="text-left fw-bold">Math Dictionary</h2>
+        <small class="fw-normal">Enhance your capacity...</small>
+        <!-- <input type="search" name="" class="form-control float-end" id=""> -->
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-light btn-sm text-dark" title="Refresh List" id="reload">REFRESH 🔄</button>
+        </div>
+        </div>
+      </div>
+    </header>
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-md-3">
+          <select name="area" id="area" class="form-select">
+            <option hidden>--AREA OF SHAPES--</option> 
+            <option value="areaCircle">Area of a Circle</option>
+            <option value="areaRectangle">Area of a Rectangle</option>
+            <option value="areaSquare">Area of a Square</option>
+            <option value="areaTriangle">Area of a Triangle</option>
+            <option value="areaTrapezium">Area of a Trapezium</option>
+            <option value="sAreaCylinder">Curved Surface Area of a Cylinder</option>
+            <option value="sAreaSphere">Surface Area of a Sphere</option>
+            <option value="sAreaCone">Surface Area of a Cone</option>
+            <option value="tsAreaCylinder">Total Surface Area of a Cylinder</option>
+            <option value="tsAreaCone">Total Surface Area of a Cone</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="interestProfit" id="interestProfit" class="form-select">
+            <option hidden>--INTEREST AND PROFIT--</option>
+            <option value="compoundInterest">Compound Interest</option>
+            <option value="dailyComInterest">Daily Compound Interest</option>
+            <option value="effIntRate">Effective Annual Interest Rate</option>
+            <option value="interestRate">Interest Rate</option>
+            <option value="percentProfitOrLoss">Percentage Profit/Loss</option>
+            <option value="simpleInterest">Simple Interest</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="perimeter" id="perimeter" class="form-select">
+            <option hidden>--PERIMETER OF SHAPES--</option> 
+            <option value="circumferenceCircle">Circumference of a Circle</option>
+            <option value="periHexagon">Perimter of a Hexagon</option>
+            <option value="periKite">Perimter of a Kite</option>
+            <option value="periRectangle">Perimter of a Rectangle (Parallelogram)</option>
+            <option value="periSquare">Perimter of a Square (Rhombus)</option>
+            <option value="periTriangle">Perimter of a Triangle</option>
+            <option value="periTrapezium">Perimter of a Trapezium</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="generals" id="generals" class="form-select">
+            <option hidden>--STATISTICS--</option>
+            <option  value="differenceOfSquares">Difference of Squares</option>
+            <option  value="meanNumbers">Mean/Average of Numbers</option>
+            <option  value="mediumNumbers">Median of Numbers</option>
+            <option  value="modeNumbers">Mode of Numbers</option>
+            <option  value="rangeNumbers">Range of Numbers</option>
+            <option  value="sumOfPerfectSquares">Sum of Perfect Squares</option>
+            <option  value="sumOfSquares">Sum of Squares</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="arithmeticProg" id="arithmeticProg" class="form-select">
+            <option hidden>--ARITHMETIC PROGRESSIONS--</option>
+            <option  value="addConNumbers">Adding Consecutive Numbers</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="anglesGeometry" id="anglesGeometry" class="form-select">
+            <option hidden>--ANGLES & DIAGONALS--</option>
+            <option value="diagonalRectangle">Diagonal of a Rectangle</option>
+            <option value="diagonalSquare">Diagonal of a Square</option>
+            <option value="sumIntAngles">Sum of Interior Angles</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select name="converters" id="converters" class="form-select">
+            <option hidden>--UNIT CONVERTERS--</option>
+            <option value="celsiusFah">Celsius to Fahrenheit</option>
+            <option value="celsiusKel">Celsius to Kelvin</option>
+            <option value="decBinaryConversion">Decimal / Binary Conversion</option>
+            <option value="degreeRadians">Degrees to Radians</option>
+            <option value="fahCelsius">Fahrenheit to Celsius</option>
+            <option value="fahKelvin">Fahrenheit to Kelvin</option>
+            <option value="kelCelsius">Kelvin to Celsius</option>
+            <option value="radiansDegree">Radians to Degrees</option>
+          </select>
+       </div>
+       <div class="col-md-3">
+          <select name="volumes" id="volumes" class="form-select">
+            <option hidden>--VOLUME OF SHAPES--</option>
+            <option value="cubeVol">Volume of Cube</option>
+            <option value="cuboidVol">Volume of Cuboid</option>
+            <option value="coneVol">Volume of Cone</option>
+            <option value="cylinderVol">Volume of Cylinder</option>
+            <option value="prismVol">Volume of Rectangualar Prism </option>
+            <option value="rightAngledPrismVol">Volume of Triangular Prism</option>
+            <option value="rightCircularConeVol">Volume of Right Circular Cone</option>
+            <option value="sphereVol">Volume of Sphere</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4">
+     <div class="row">
+       <div class="col-md-12 card" id="panel">
+         <h3 class="display-6 text-center">Join this great community and become a Mathematical Genius! 📅</h3>
+          <div class="box" data-response="areaSquare">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">The square is a shape with four equal sides. It's area is calculated by formula Area = L × L = L<sup>2</sup> in square units</div><hr>
+              <div class="col-md-3">
+                <label for="areaSquare">Enter Length of one side</label>
+              </div>
+              <div class="col-md-6">
+                <input type="number" min="0" id="areaSquare" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-1 btn btn-secondary w-100" id="areaSquareEqualsBtn">=</button></div>
+              <div id="areaSquareResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF AREA OF SQUARE-->
+          <div class="box" data-response="areaCircle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">The formula for the area of a circle is A = πr2, where r is the radius of the circle. Area of Circle = πr<sup>2</sup> or πd2/4 in square units, where (Pi) π = 22/7 or 3.14. Pi (π) is the ratio of circumference to diameter of any circle.</div><hr>
+              <div class="col-md-3">
+                <label for="areaRadius">Enter Radius of the circle (cm)</label>
+              </div>
+              <div class="col-md-6">
+                <input type="number" min="0" id="areaRadius" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-1 btn btn-secondary w-100" id="areaCircleEqualsBtn">=</button></div>
+              <div id="areaCircleResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF AREA OF CIRCLE-->
+          <div class="box" data-response="areaTriangle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                The area of a triangle is defined as the total region that is enclosed by the three sides of any particular triangle. It is given by the formula (Area = 1/2 * b * h) where b is the base and h is the height of the triangle.
+              </div><hr>
+              <div class="col-md-4">
+                <label for="baseTriangle">Enter base (cm)</label>
+                <input type="number" min="0" id="baseTriangle" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="heightTriangle">Enter height (cm)</label>
+                <input type="number" min="0" id="heightTriangle" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="areaTriangleEqualsBtn">=</button></div>
+              <div id="areaTriangleResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF AREA OF TRIANGLE-->
+          <div class="box" data-response="areaTrapezium">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                A trapezium, also known as a trapezoid, is a quadrilateral in which a pair of sides are parallel, but the other pair of opposite sides are non-parallel. It is given by the formula: (Area = 1/2 * Sum of parallel sides (a,b) * Distance between them(height)) .
+              </div><hr>
+              <div class="col-md-3">
+                <label for="sideA">Enter Length of side A (cm)</label>
+                <input type="number" min="0" id="sideA" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="sideB">Enter Length of side B (cm)</label>
+                <input type="number" min="0" id="sideB" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="heightTrapezium">Enter Height (cm)</label>
+                <input type="number" min="0" id="heightTrapezium" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="areaTrapeziumEqualsBtn">=</button></div>
+              <div id="areaTrapeziumResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF AREA OF TRAPEZIUM-->
+          <div class="box" data-response="areaRectangle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                Area of rectangle is the region covered by the rectangle in a two-dimensional plane. A rectangle is a 2d shape which has four sides and four vertices. The formula for the Area of a Rectangle (A = Length * Width)
+              </div><hr>
+              <div class="col-md-4">
+                <label for="lengthRect">Enter Length (cm)</label>
+                <input type="number" min="0" id="lengthRect" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="widthRect">Enter Width (cm)</label>
+                <input type="number" min="0" id="widthRect" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="areaRectangleEqualsBtn">=</button></div>
+              <div id="areaRectangleResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF AREA OF RECTANGLE-->
+          <div class="box" data-response="tsAreaCylinder">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                The total surface area of the cylinder is obtained by adding the area of the two bases and the area of the curved surface area. Thus, the formula for the surface area of the cylinder is given as,  Total surface area of cylinder = 2πr2+2πrh = 2πr(h+r) where r = Base radius of the cylinder and h = Height of cylinder
+              </div><hr>
+              <div class="col-md-4">
+                <label for="baseRadius">Enter Base Radius (cm)</label>
+                <input type="number" min="0" id="baseRadius" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="distanceHeight">Enter Height (distance)(cm)</label>
+                <input type="number" min="0" id="distanceHeight" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="tsAreaCylEqualsBtn">=</button></div>
+              <div id="tsAreaCylinderResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF TOTAL SURFACE AREA OF A CYLINDER-->
+          <div class="box" data-response="tsAreaCone">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                The surface area of a three-dimensional shape is the sum total of all of the surface areas of each of the sides. Total Surface Area of the Cone = Area of its circular base + Area of the total curved surface. Thus, the total Surface Area of a Cone = πr2+πrl i.e SA = πr(l+r)
+              </div><hr>
+              <div class="col-md-4">
+                <label for="baseRadiusCone">Enter Base Radius (cm)</label>
+                <input type="number" min="0" id="baseRadiusCone" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="slantHeight">Enter Slant Height (cm)</label>
+                <input type="number" min="0" id="slantHeight" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="tsAreaConeEqualsBtn">=</button></div>
+              <div id="tsAreaConeResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF TOTAL SURFACE AREA OF A CONE-->
+          <div class="box" data-response="simpleInterest">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                Simple interest (S.I) is based on the time value of money. This means that money has a current value in the present, known as present value and another value in the future known as future value. It can be deduced from the formula (Simple Interest = (P × R × T) ÷ 100 => where P = Principal which is the initial amount of the loan, or the initial amount invested, R = Rate at which interest will be charged per annum and T = Time duration of the arrangement
+              </div><hr>
+              <div class="col-md-3">
+                <label for="principalSI">Enter principal (₦)</label>
+                <input type="number" min="0" id="principalSI" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="rateSI">Enter Rate (%)</label>
+                <input type="number" min="0" id="rateSI" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="timeSI">Enter Time (year)</label>
+                <input type="number" min="0" id="timeSI" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="SIEqualsBtn">=</button></div>
+              <div id="SIResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SIMPLE INTEREST -->
+          <div class="box" data-response="interestRate">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                The interest rate, which is the percentage of the principal amount, charged by the lender or bank to the borrower for the use of its assets or money for a specific time period. The interest rate formula helps in calculating the amount of money to be repaid towards a loan taken and the interest over the investment on fixed deposits, mutual funds, etc. The interest rate for a given amount on simple interest can be calculated by the following formula, <b class="fw-bold">Interest Rate = (Simple Interest × 100)/(Principal × Time) </b>
+              </div><hr>
+              <div class="col-md-3">
+                <label for="principalIR">Enter principal invested (₦)</label>
+                <input type="number" min="0" id="principalIR" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="returnsIR">Enter returns received (₦)</label>
+                <input type="number" min="0" id="returnsIR" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="timeIR">Enter time period (year)</label>
+                <input type="number" min="0" id="timeIR" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="interestRateEqualsBtn">=</button></div>
+              <div id="interestRateResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF INTEREST RATE -->
+          <div class="box" data-response="compoundInterest">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                Compound Interest (C.I) is the additional amount on the principal amount often expressed as a percentage on the principal amount. We calculate the interest on the principal amount and the interest that has accumulated during the previous period. Essentially, compound interest is the interest on the interest! So rather than paying out the interest, it is reinvested and becomes a part of the principal. 
+                C.I. = P ( 1 + R/100)<sup>t</sup> – P (where P = Principal, R = Annual interest rate in percentage terms, t = number of compounding periods)
+              </div><hr>
+              <div class="col-md-3">
+                <label for="principalCI">Enter principal (₦)</label>
+                <input type="number" min="0" id="principalCI" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="rateCI">Enter Interest Rate (%)</label>
+                <input type="number" min="0" id="rateCI" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="timeCI">Enter Period of Time (year)</label>
+                <input type="number" min="0" id="timeCI" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="CIEqualsBtn">=</button></div>
+              <div id="CIResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF COMPOUND INTEREST -->
+          <div class="box" data-response="percentProfitOrLoss">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+               <p>PROFIT: If selling price is greater than Cost price, then excess of SP to CP is called Gain or Profit. PROFIT = (SELLING PRICE – COST PRICE)</p>
+               <p>LOSS: If selling price is less than Cost price, then excess of CP to SP is called Loss. LOSS = COST PRICE – SELLING PRICE</p>
+               NB => Profit and loss percentage is always calculated on cost price, unless otherwise specified. (Profit % = 100 × Profit/Cost Price) | (Loss % = 100 × Loss/Cost Price)
+              </div><hr>
+              <div class="col-md-3">
+                <label for="costPrice">Enter Cost Price (₦)</label>
+                <input type="number" min="0" id="costPrice" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="sellingPrice">Enter Selling Price (₦)</label>
+                <input type="number" min="0" id="sellingPrice" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="timeCI">Category</label>
+                <select id="percentCategory" class="form-select">
+                    <option hidden>Select % Profit or Loss --</option>
+                    <option value="profit">Profit</option>
+                    <option value="loss">Loss</option>
+                    <option value="profit_PERCENT">% Profit</option>
+                    <option value="loss_PERCENT">% Loss</option>
+                </select>
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="percentageEqualsBtn">=</button></div>
+              <div id="percentageResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF COMPOUND INTEREST -->
+          <div class="box" data-response="sumOfSquares">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+               The sum of squares is a very useful tool used by statisticians and scientists. Therefore, It is calculated by taking the differences between each number in the data set and the mean, then squaring the differences to make them positive, and finally dividing the sum of the squares by the number of values in the data set.
+               In the statistics domain, the formula for this total sum of squares is: Σ(xi–x¯)<sup>2</sup> where x¯	the sample mean x_i	ith data from the sample. Σ Sum(xi–x¯)	The difference of data with the mean value.
+              </div><hr>
+              <div class="col-md-8">
+                <label for="costPrice">Enter range of numbers seperated with a space</label><br>
+                <small class="text-muted">Using special characters would default to 0</small>
+                <input type="text" placeholder="eg. 2 6 7 1 2 56 21 23" id="numbers" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-5 btn btn-secondary w-100" id="sumOfSqEqualsBtn">=</button></div>
+              <small class="text-muted">Wrong inputs would give an inaccurate result ⚠ </small>
+              <div id="sumOfSquaresResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SUM OF SQUARES -->
+          <div class="box" data-response="differenceOfSquares">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The difference of squares formula is one of e primary algebraic formulas in which the difference of two squared values is equal to the product of sum of the values and the difference of the values. The difference of squares formula for two values a and b can be given as follows: a<sup>2</sup>-b<sup>2</sup> = (a+b)(a-b) 
+              </div><hr>
+              <div class="col-md-4">
+                <label for="firstValue">Enter first value to be squared</label>
+                <input type="number" min="0" id="firstValue" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="secondValue">Enter second value to be squared</label>
+                <input type="number" min="0" id="secondValue" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="differenceOfSquaresEqualsBtn">=</button></div>
+              <div id="differenceOfSquaresResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF DIFFERENCE OF SQUARES -->
+          <div class="box" data-response="celsiusFah">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Celsius and Fahrenheit are the scales of temperature. Temperature scales provide a way of measuring how hot or cold a body is. Celsius or centigrade is a scale in which water freezes at 0° Celsius and boils at 100° Celsius. The symbol used for Celsius is °C.  On the Fahrenheit temperature scale, water freezes at 32° Fahrenheit and boils at 212° Fahrenheit. The symbol used for Fahrenheit is °F. Celsius to Fahrenheit Formula for a given value can be expressed as, F = (9/5)C+32 where,
+
+              C is the temperature given on a centigrade scale, and
+              F is the temperature obtained in Fahrenheit after conversion.
+              </div><hr>
+              <div class="col-md-6">
+                <label for="celsiusTemp">Enter temperature in Celsius</label>
+                <input type="number" min="0" id="celsiusTemp" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="celsiusTempEqualsBtn">=</button></div>
+              <div id="celsiusResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF CELSIUS TO FAHRENHEIT -->
+          <div class="box" data-response="celsiusKel">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The Celsius to Kelvin formula is used to change the unit of temperature from Celsius to Kelvin. The temperature can be converted from Celcius to Kelvin just by adding the number 273.15 to it. The Celcius to Kelvin formula is, T (K) = T (°C) + 273.15 where,
+              T(°C) = Temperature in Celsius
+              T (K) = Temperature in Kelvin
+              </div><hr>
+              <div class="col-md-6">
+                <label for="celsiusKelTemp">Enter temperature in Celsius</label>
+                <input type="number" min="0" id="celsiusKelTemp" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="celsiusKelTempEqualsBtn">=</button></div>
+              <div id="celsiusKelResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF CELSIUS TO KELVIN -->
+          <div class="box" data-response="kelCelsius">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The Kelvin to Celsius formula is used to change the unit of temperature from Kelvin to Celsius. The temperature can be converted from Kelvin to Celsius just by subracting the number 273.15 from Kelvin. The Kelvin to Celsius formula is, C = T(K) - 273.15 where, T(K) = Temperature in Kelvin
+              </div><hr>
+              <div class="col-md-6">
+                <label for="kelCelsiusTemp">Enter temperature in Kelvin</label>
+                <input type="number" min="0" id="kelCelsiusTemp" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="kelCelsiusEqualsBtn">=</button></div>
+              <div id="kelCelsiusResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF KELVIN TO CELSIUS -->
+          <div class="box" data-response="fahCelsius">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Celsius and Fahrenheit are the scales of temperature. Temperature scales provide a way of measuring how hot or cold a body is. On the Fahrenheit temperature scale, water freezes at 32° Fahrenheit and boils at 212° Fahrenheit. The symbol used for Fahrenheit is °F. The F to C formula of a given value can be expressed as, C = (F - 32) × 5/9 Where,
+              C = Measure of temperature in degree celsius (°C).
+              F = Measure of temperature in degree Fahrenheit (°F).
+              </div><hr>
+              <div class="col-md-6">
+                <label for="fahrenTemp">Enter temperature in Fahrenheit</label>
+                <input type="number" min="0" id="fahrenTemp" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="fahrenTempEqualsBtn">=</button></div>
+              <div id="fahrenheitResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF FAHRENHEIT TO CELSIUS -->
+          <div class="box" data-response="fahKelvin">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Fahrenheit and Kelvin are the two very commonly known and used scales for temperature. While the Fahrenheit scale of temperature is used in the United States, the Kelvin scale is used extensively for scientific calculations worldwide. In the Kelvin scale, the degree symbol is not used; instead, they are noted or denoted as Kelvin itself. Fahrenheit to Kelvin formula of a given temperature can be expressed as, T<sub>K</sub> = 5/9 (T<sub>F</sub> + 459.67) where, T<sub>K</sub> = Temperature in Kelvin. TF = Temperature in Fahrenheit.
+              </div><hr>
+              <div class="col-md-6">
+                <label for="fahKelvinTemp">Enter temperature in Fahrenheit</label>
+                <input type="number" min="0" id="fahKelvinTemp" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="fahKelvinTempEqualsBtn">=</button></div>
+              <div id="fahKelvinResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF FAHRENHEIT TO KELVIN -->
+          <div class="box" data-response="cubeVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The volume of a cube is the total three-dimensional space occupied by a cube. A cube has edge length of equal sides. The unit of volume of the cube is given as the (unit)<sup>3</sup> or cubic units. 
+              V = s<sup>3</sup>, where s is the edge length of the cube
+              </div><hr>
+              <div class="col-md-6">
+                <label for="cubeLength">Enter Length of one side(cm)</label>
+                <input type="number" min="0" id="cubeLength" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="cubeVolEqualsBtn">=</button></div>
+              <div id="cubeVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF CUBE -->
+          <div class="box" data-response="cuboidVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The volume of the cuboid is the measure of the space occupied within a cuboid. The cuboid is a three-dimensional shape that has length, breadth, and height. The unit of volume of cuboid is given as the (unit)<sup>3</sup> 
+              V = L × B × H, where L is the length of cuboid, B is the breadth of the cuboid, H is the height of cuboid.
+              </div><hr>
+              <div class="col-md-3">
+                <label for="cuboidLength">Enter length of cuboid (cm)</label>
+                <input type="number" min="0" id="cuboidLength" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="cuboidWidth">Enter width of cuboid (cm)</label>
+                <input type="number" min="0" id="cuboidWidth" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="cuboidHeight">Enter height of cuboid (cm)</label>
+                <input type="number" min="0" id="cuboidHeight" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="cuboidVolEqualsBtn">=</button></div>
+              <div id="cuboidVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF CUBOID -->
+          <div class="box" data-response="cylinderVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The volume of a 3-dimensional (Cylinder) solid is the amount of space it occupies.  It's volume is measured in cubic units (cm<sup>3</sup>). The volume V of a cylinder with radius r is the area of the base B times the height h. V=Bh  or  V=πr<sup>2</sup>h 
+              </div><hr>
+              <div class="col-md-3">
+                <label for="radiusCyl">Enter radius of one side (cm)</label>
+                <input type="number" min="0" id="radiusCyl" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="heightCyl">Enter height (cm)</label>
+                <input type="number" min="0" id="heightCyl" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="cylVolEqualsBtn">=</button></div>
+              <div id="cylVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF CYLINDER -->
+          <div class="box" data-response="sphereVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A sphere is a set of points in space that are a given distance r from the center. The volume V of a sphere is four-thirds times pi times the radius cubed. Volume is measured in cubic units(cm<sup>3</sup>)
+              V = <sup>4</sup>/<sub>3</sub>×π×r<sup>3</sup>
+              </div><hr>  
+              <div class="col-md-4">
+                <label for="sphereRadius">Enter radius (cm)</label>
+                <input type="number" min="0" id="sphereRadius" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="sphereVolEqualsBtn">=</button></div>
+              <div id="sphereVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF SPHERE -->
+          <div class="box" data-response="rightCircularConeVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+               The volume of a right circular cone is the space occupied by the right circular cone or the capacity of the right circular cone. A right circular cone is a cone whose axis is perpendicular to the plane of the base. A right circular cone is generated by a revolving right triangle about one of its legs. The volume of the right circular cone is equal to one-third of the product of the area of the circular base and its height. The formula for the volume is V = (<sup>1</sup>/<sub>3</sub>) × πr<sup>2</sup>h where r is the radius of the base circle and h is the height of the cone.
+              </div><hr>
+              <div class="col-md-3">
+                <label for="ccRadius">Enter radius (cm)</label>
+                <input type="number" min="0" id="ccRadius" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="ccHeight">Enter height (cm)</label>
+                <input type="number" min="0" id="ccHeight" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="rightCircularConeVolEqualsBtn">=</button></div>
+              <div id="rightCircularConeVolResult" class="col-md-12 mt-2 alert alert-success hide"></div> 
+            </div>
+          </div><!--END OF VOLUME OF RIGHT-CIRCULAR-CONE -->
+          <div class="box" data-response="prismVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+             A prism is a polyhedron with two parallel, congruent faces called bases that are polygons. The volume of a 3 -dimensional solid is the amount of space it occupies.  Volume is measured in cubic units (cm<sup>3</sup>). The volume V of a prism is the area of the base B times the height h. <br>
+             NB => The base of the prism is a rectangle, therefore B = L * W <br>
+             It is given by the formula, (V = Bh) => (L * W) * h
+              </div><hr>
+              <div class="col-md-3">
+                <label for="lengthPrism">Enter length of base (cm)</label>
+                <input type="number" min="0" id="lengthPrism" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="widthPrism">Enter width of base (cm)</label>
+                <input type="number" min="0" id="widthPrism" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="heightPrism">Enter height of prism (cm)</label>
+                <input type="number" min="0" id="heightPrism" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="prismVolEqualsBtn">=</button></div>
+              <div id="prismVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF PRISM -->
+          <div class="box" data-response="rightAngledPrismVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+                The volume of a triangular prism is nothing but the space inside it (or) space occupied it. It is measured in cubic units such as cm3. The volume of any prism is obtained by multiplying its base area by its height. i.e., The volume of a triangular prism = (area of base triangle × height) <br>
+                If the base triangle is a right-angled triangle (in this case, the prism is called a right triangular prism) with two legs 'b' and 'h' then its area is (1/2) bh.
+              </div><hr>
+              <div class="col-md-3">
+                <label for="triBasePrism">Enter base of triangle (cm)</label>
+                <input type="number" min="0" id="triBasePrism" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="triHeightPrism">Enter height of triangle (cm)</label>
+                <input type="number" min="0" id="triHeightPrism" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="height-Prism">Enter main height (cm)</label>
+                <input type="number" min="0" id="height-Prism" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="rightAngledPrismVolEqualsBtn">=</button></div>
+              <div id="rightAngledPrismVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF TRIANGULAR PRISM -->
+          <div class="box" data-response="circumferenceCircle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The perimeter of a circle is its boundary or the complete arc length of the periphery of a circle. The term that denotes the perimeter of a circle is called its circumference. Perimeter of a circle = 2 π r = π D where, r = radius of the circle and D = diameter of the circle. 
+              </div><hr>
+              <div class="col-md-3">
+                <label for="ccCategory">Radius/Diameter (cm)</label>
+                <select id="ccCategory" class="form-control">
+                  <option hidden>-- OPTIONS --</option>
+                  <option value="diam">Diameter</option>
+                  <option value="rad">Radius</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="ccValue">Enter Value (cm)</label>
+                <input type="number" min="0" id="ccValue" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="ccEqualsBtn">=</button></div>
+              <div id="ccResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF CIRCUMFERENCE OF A CIRCLE -->
+          <div class="box" data-response="periKite">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A kite is a plane figure that has two pairs of equal size. Perimeter of a kite = 2a + 2b <br>
+              Where ‘a’ is the length of the first pair and ‘b’ is the length is the second pair
+              </div><hr>
+              <div class="col-md-4">
+                <label for="topKite">Enter Length of top side (cm)</label>
+                <input type="number" min="0" id="topKite" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="bottomKite">Enter Length of bottom side (cm)</label>
+                <input type="number" min="0" id="bottomKite" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="periKiteEqualsBtn">=</button></div>
+              <div id="periKiteResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A KITE -->
+          <div class="box" data-response="periHexagon">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A hexagon is a polygon and has six sides and six edges. All six sides of a hexagon are equal and each internal angle is 120 degrees. The perimeter of Hexagon = 6 × a <br>Where ‘a’ is the side of a hexagon
+              </div><hr>
+              <div class="col-md-6">
+                <label for="hexSide">Enter Length of one side (cm)</label>
+                <input type="number" min="0" id="hexSide" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="periHexEqualsBtn">=</button></div>
+              <div id="periHexResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A HEXAGON -->
+          <div class="box" data-response="periRectangle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A rectangle is a two-dimensional figure that has the opposite sides equal. Perimeter of a rectangle = 2(l + b) <br>Where ‘l’ is the length of a rectangle and ‘b’ is the breadth of the rectangle <br> NB => A parallelogram (e.g Rectangle, Rhombus, etc.)is a two-dimensional figure which has opposite sides equal and parallel to each other.
+              </div><hr>
+              <div class="col-md-4">
+                <label for="periRectL">Enter Length(cm)</label>
+                <input type="number" min="0" id="periRectL" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="periRectB">Enter Breadth (cm)</label>
+                <input type="number" min="0" id="periRectB" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="periRectEqualsBtn">=</button></div>
+              <div id="periRectResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A RECTANGLE/PARALLELOGRAM -->
+          <div class="box" data-response="periSquare">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A square is a two-dimensional figure that has all the sides equal. SO now let us look at the perimeter formula of a square, The perimeter of a square = 4L (4 * L) <br>
+              Where ‘L’ is the length of a side of a square
+              </div><hr>
+              <div class="col-md-4">
+                <label for="periSqL">Enter Length(cm)</label>
+                <input type="number" min="0" id="periSqL" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="periSquareEqualsBtn">=</button></div>
+              <div id="periSquareResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A SQUARE -->
+          <div class="box" data-response="periTriangle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A triangle is a 2D figure with three sides. An equilateral triangle has all three sides equal whereas an isosceles triangle has its two sides equal. A scalene has all three different-length sides. <br> Perimeter of a Triangle = a + b + c <br>
+              Where ‘a’ ‘b’ and ‘c’ are the sides of the triangle
+              </div><hr>
+              <div class="col-md-3">
+                <label for="periTA">Enter Length of side A(cm)</label>
+                <input type="number" min="0" id="periTA" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="periTB">Enter Length of side B(cm)</label>
+                <input type="number" min="0" id="periTB" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="periTC">Enter Length of side C(cm)</label>
+                <input type="number" min="0" id="periTC" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="periTEqualsBtn">=</button></div>
+              <div id="periTResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A TRIANGLE -->
+          <div class="box" data-response="periTrapezium">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A trapezoid is a type of polygon. It is a quadrilateral that has at least a pair of sides parallel to each other. The altitude of a trapezium is the perpendicular distance between the parallel sides. <br> Perimeter of a trapezoid = a + b + c + d <br>
+              Where a, b, c, d are Length of each of the sides of the trapezium
+              </div><hr>
+              <div class="col-md-2">
+                <label for="periTrpA">Length top side(cm)</label>
+                <input type="number" min="0" id="periTrpA" class="form-control">
+              </div>
+              <div class="col-md-2">
+                <label for="periTrpB">Length right side(cm)</label>
+                <input type="number" min="0" id="periTrpB" class="form-control">
+              </div>
+              <div class="col-md-2">
+                <label for="periTrpC">Length left side(cm)</label>
+                <input type="number" min="0" id="periTrpC" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label for="periTrpD">Length bottom side(cm)</label>
+                <input type="number" min="0" id="periTrpD" class="form-control">
+              </div>
+              <div class="col-md-2"><button class="mt-4 btn btn-secondary w-100" id="periTrpEqualsBtn">=</button></div>
+              <div id="periTrpResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF PERIMETER OF A TRAPEZIUM -->
+          <div class="box" data-response="sAreaSphere">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The surface area of a sphere is the same as the lateral surface area of a cylinder having the same radius as the sphere and a height the length of the diameter of the sphere. <br>
+              The lateral surface area of the cylinder is 2πrh where h=2r. <br>  
+              Lateral Surface Area of the Cylinder =2πr(2r)=4πr<sup>2</sup> <br> 
+              Therefore, the Surface Area of a Sphere with radius r equals 4πr<sup>2</sup>
+              </div>
+              <div class="col-md-4">
+                <label for="sphereRad">Enter Radius (cm)</label>
+                <input type="number" min="0" id="sphereRad" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="sphereRadEqualsBtn">=</button></div>
+              <div id="sphereRadResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SURFACE AREA OF A SPHERE -->
+          <div class="box" data-response="sAreaCylinder">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The curved surface area of a cylinder is the area covered by the curved surface. The formula to calculate the curved surface area of a cylinder is given as, The curved surface area of cylinder = 2πrh where, <br> 
+              r = Radius of the base of the cylinder <br> 
+              h = Height of cylinder
+              </div><hr>
+              <div class="col-md-4">
+                <label for="baseRadiusC">Enter Base Radius (cm)</label>
+                <input type="number" min="0" id="baseRadiusC" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="distanceHeightC">Enter Height (cm)</label>
+                <input type="number" min="0" id="distanceHeightC" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="sAreaCylEqualsBtnC">=</button></div>
+              <div id="sAreaCylinderResultC" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF CURVED SURFACE AREA OF A CYLINDER-->
+          <div class="box" data-response="sAreaCone">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              <img src="./img/csaCone.gif" class="float-end" alt="surface area of a cone">
+              The lateral surface area of a cone is the area of the lateral or side surface only. <br> It is given by the formula πrl <br>
+              where r = radius of the base area, and l = slant height of the cone
+              </div><hr>
+              <div class="col-md-4">
+                <label for="radiusACone">Enter Base Radius (cm)</label>
+                <input type="number" min="0" id="radiusACone" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="slantHACone">Enter Height(slant) (cm)</label>
+                <input type="number" min="0" id="slantHACone" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="sAreaConeEqualsBtn">=</button></div>
+              <div id="sAreaConeResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SURFACE AREA OF A CONE-->
+          <div class="box" data-response="coneVol">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              <img src="./img/volCone.gif" class="float-end" alt="volume of a cone">
+              A cone is a three-dimensional figure with one circular base. A curved surface connects the base and the vertex.
+              The volume V of a cone with radius r is one-third the area of the base B times the height h. <br>
+              V=<sup>1</sup>/<sub>3</sub>Bh  or  V=<sup>1</sup>/<sub>3</sub>πr<sup>2</sup>h,  where  B=πr<sup>2</sup>
+              </div>
+              <div class="col-md-4">
+                <label for="coneVolRad">Enter Base Radius (cm)</label>
+                <input type="number" min="0" id="coneVolRad" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="coneVolH">Enter Height (cm)</label>
+                <input type="number" min="0" id="coneVolH" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="coneVolEqualsBtn">=</button></div>
+              <div id="coneVolResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF VOLUME OF A CONE-->
+          <div class="box" data-response="effIntRate">
+            <div class="row">
+              <div class="col-md-12 lead mb-2"> 
+              The effective annual rate (EAR) is the usage rate that a borrower actually pays on a loan, credit card, or any other debt amount. It is the real interest return rate  when the effects of compounding over time are taken into account. The effective annual rate is normally higher than the nominal rate because the nominal rate quotes a yearly percentage rate regardless of compounding. If we Increase the number of compounding periods, it makes the effective annual interest rate increase as time goes by. <br> Effective interest rate formula can be expressed as, r = (1 + <sup>i</sup>/<sub>n</sub>)<sup>n</sup> - 1
+              </div>
+              <div class="col-md-3">
+                <label for="statedIntRate">Enter Stated Interest Rate (%)</label>
+                <input type="number" min="0" id="statedIntRate" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="numPeriods">Enter No of Compounding periods/year</label>
+                <input type="number" min="0" id="numPeriods" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="effIntRateEqualsBtn">=</button></div>
+              <div id="effIntRateResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF EFFECTIVE ANNUAL INTEREST RATE-->
+          <div class="box" data-response="decBinaryConversion">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Every number system has a base and the base of a number system is determined by the total number of digits used in the number system. <b class="fw-bold"> For example, the binary number system has a base of 2 because it has only two digits to represent any number. Similarly, the decimal number system has a base of 10, as it has 10 digits to represent a number. </b> <br>
+              Decimal numbers can be easily converted into binary numbers by <b class="fw-bold"> dividing the given decimal number recursively by 2 and note down the remainders until we get 0 or 1 as the quotient.</b> <br><br>
+              Binary numbers can be easily converted into decimal numbers by adding the products of each binary digit with its weight <b class="fw-bold">(which is of the form - binary digit × 2 raised to a power of the position of the digit)</b> starting from the right-most digit which has a weight of 20.
+              <hr>
+              </div>
+              <div class="col-md-3">
+                <label for="BDoption" class="form-label">Choose conversion</label>
+                <select id="BDoption" class="form-select">
+                  <option hidden>--SELECT--</option>
+                  <option value="binaryToDecimal">Binary to Decimal</option>
+                  <option value="decimalToBinary">Decimal to Binary</option>
+                </select> 
+              </div>
+              <div class="col-md-4">
+                <label for="binaryDecimalVal" class="form-label">Enter number to be converted</label>
+                <input type="number" min="0" id="binaryDecimalVal" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="binaryDecimalEqualsBtn">=</button></div>
+              <div id="binaryDecimalResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF BINARY TO DECIMAL AND VICE VERSA-->
+          <div class="box" data-response="addConNumbers">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The consecutive numbers are numbers that follow each other in increasing order. Two consecutive numbers always differ by 1. Examples of Consecutive Numbers are: <b class="fw-bold"> 12, 13, 14, ..., or -2, -1, 0, 1, 2, .... </b> Since the difference between every two consecutive numbers is the same (as 1), every list of consecutive numbers is an arithmetic sequence. So the sum of the arithmetic sequence formula can be used as the formula for adding consecutive numbers. <br>
+              <span class="fw-bold">Sum of n consecutive numbers = (n/2) (first term + last term)</span> <br> Here, n = (last number - first number + 1)
+              <hr>
+              </div>
+              <div class="col-md-4">
+                <label for="starterNum">Enter First Number</label>
+                <input type="number" min="0" id="starterNum" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label for="endNum">Enter Last Number</label>
+                <input type="number" min="0" id="endNum" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="addConNumbersEqualBtn">=</button></div>
+              <div id="addConNumbersResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF ADDING CONSECUTIVE NUMBERS -->
+          <div class="box" data-response="sumIntAngles">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Interior angles are the angles that lie inside a shape, generally a polygon. Also, the angles lying in the area enclosed between two parallel lines that are intersected by a transversal are also called interior angles. The formula to find the sum of interior angles of a polygon is given as, <b class="fw-bold"> The sum of interior angles = 180(n-2)º </b>
+              </div><hr>
+              <div class="col-md-4">
+                <label for="numOfSides">Enter number of Polygons sides</label>
+                <input type="number" min="0" id="numOfSides" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="sumIntAnglesEqualsBtn">=</button></div>
+              <div id="sumIntAnglesResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SUM OF INTERIOR ANGLES -->
+          <div class="box" data-response="degreeRadians">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The two units of measurement for measuring angles are degrees and radians. <br> A degree, referred to as the degree of arc or arc degree, is the unit of measuring a plane angle and denoted by the symbol (°) <br>
+              One radian is the angle that is formed at the center of a circle by an arc whose length is equal to the radius 'r' of the circle. Converting degrees to radians, we multiply the angle (in degrees) by π / 180. <br>
+              <b class="fw-bold"> Radians = Degrees × π / 180 </b>
+              </div><hr>
+              <div class="col-md-6">
+                <label for="degreeVal">Enter value (&deg;)</label>
+                <input type="number" min="0" id="degreeVal" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="degreeRadiansEqualsBtn">=</button></div>
+              <div id="degreeRadiansResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF DEGREE TO RADIANS CONVERSION -->
+          <div class="box" data-response="radiansDegree">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The two units of measurement for measuring angles are degrees and radians. <br> We use radians in place of degrees when we want to calculate the angle in terms of radius. <br>
+              One radian is the angle that is formed at the center of a circle by an arc whose length is equal to the radius 'r' of the circle. To convert an angle given in radians to degrees, we just need to multiply the angle by 180° / π.
+              <b class="fw-bold"> Angle in degree = (180° / π * Angle in radian) </b>
+              </div><hr>
+              <div class="col-md-6">
+                <label for="radianVal">Enter value (radian)</label>
+                <input type="number" min="0" id="radianVal" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="radiansDegreeEqualsBtn">=</button></div>
+              <div id="radiansDegreeResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF RADIANS TO DEGREE CONVERSION -->
+          <div class="box" data-response="meanNumbers">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The mean is simply the average of the numbers. It is easy to calculate: add up all the numbers, then divide by how many numbers there are. <br>
+              <b class="fw-bold">In other words it is the sum divided by the count. </b>
+              </div><hr>
+              <small class="text-muted">Please seperate numbers with a space or (with a space and a comma)</small>
+              <div class="col-md-6">
+                <label for="numberRange">Enter the range of numbers</label>
+                <input type="text" id="numberRange" class="form-control" placeholder="23 45 12 4 10 56 100 22 56 34 89">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="meanNumbersEqualsBtn">=</button></div>
+              <small class="text-muted">Wrong inputs would give an inaccurate result ⚠ </small>
+              <div id="meanNumbersResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF MEAN OF NUMBERS -->
+          <div class="box" data-response="mediumNumbers">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The median is the <b class="fw-bold"> middle value in the list of numbers. </b> To find the median, your numbers have to be listed in numerical order from smallest to largest, so you may have to rewrite your list before you can find the median.
+              <b class="fw-bold">This program sorts the list 😊 first before finding the median </b>
+              </div><hr>
+              <small class="text-muted">Please seperate numbers with a space or (with a space and a comma)</small>
+              <div class="col-md-7">
+                <label for="numberRangeMedian">Enter the range of numbers</label>
+                <input type="text" id="numberRangeMedian" class="form-control" placeholder="23 45 12 4 10 56 100 22 56 34 89">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="mediumNumbersEqualsBtn">=</button></div>
+              <small class="text-muted">Wrong inputs would give an inaccurate result ⚠ </small>
+              <div id="mediumNumbersResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF MEDIAN OF NUMBERS -->
+          <div class="box" data-response="modeNumbers">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              <b class="fw-bold">The mode is the value that occurs most often. </b>
+               If no number in the list is repeated, then there is no mode for the list.
+              </div><hr>
+              <small class="text-muted">Please seperate numbers with a space or (with a space and a comma)</small>
+              <div class="col-md-7">
+                <label for="numberRangeMode">Enter the range of numbers</label>
+                <input type="text" id="numberRangeMode" class="form-control" placeholder="23 45 12 4 10 56 100 22 56 34 89">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="modeNumbersEqualsBtn">=</button></div>
+              <small class="text-muted">Wrong inputs would give an inaccurate result ⚠ </small>
+              <div id="modeNumbersResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF MODE OF NUMBERS -->
+          <div class="box" data-response="rangeNumbers">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              The "range" of a list a numbers is just <b class="fw-bold"> the difference between the largest and smallest values.</b>
+              </div><hr>
+              <small class="text-muted">Please seperate numbers with a space or (with a space and a comma)</small>
+              <div class="col-md-7">
+                <label for="rangeNum">Enter the set of numbers</label>
+                <input type="text" id="rangeNum" class="form-control" placeholder="23 45 12 4 10 56 100 22 56 34 89">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="rangeNumbersEqualsBtn">=</button></div>
+              <small class="text-muted"> ⚠ Inputs without spacing would give an inaccurate result or default to zero (0) </small>
+              <div id="rangeNumbersResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF RANGEH OF NUMBERS -->
+          <div class="box" data-response="sumOfPerfectSquares">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              A perfect square is a number that can be written as the square of a number. 1, 4, 9, 16, 25, 36, etc are some perfect squares as they can be expressed as 1<sup>2</sup>, 2<sup>2</sup>, 3<sup>2</sup>, 4<sup>2</sup>, 5<sup>2</sup>, 6<sup>2</sup>, etc respectively. <b class="fw-bold"> The sum of perfect squares formula is used to find the sum of two or more perfect squares without adding them manually.</b>
+              </div><hr>
+              <div class="col-md-6">
+                <label class="mb-1" for="nthTerm">Enter the nth of natural numbers</label>
+                <input type="number" id="nthTerm" class="form-control" placeholder="e.g 5 => first 5 natural number">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="sumOfPerfectSquaresEqualsBtn">=</button></div>
+              <div id="sumOfPerfectSquaresResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SUM OF PERFECT SQUARES -->
+          <div class="box" data-response="dailyComInterest">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              Compounding means adding interest to the current principal amount. The daily compound interest formula is where the interest is calculated 365 times in a year, hence the value of n is 365. <br> The daily compound interest formula is:<b class="fw-bold"> A = P (1 + r / n)<sup>nt</sup></b> <br>
+              where: P = the principal amount, r = rate of interest, t = time in years, n = number of times the amount is compounding. (365 days)
+              </div><hr>
+              <div class="col-md-3">
+                <label class="mb-1" for="dailyPrincipal">Enter the principal amount(₦)</label>
+                <input type="number" id="dailyPrincipal" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label class="mb-1" for="dailyRate">Enter the rate of interest</label>
+                <input type="number" id="dailyRate" class="form-control">
+              </div>
+              <div class="col-md-3">
+                <label class="mb-1" for="dailyTime">Enter the time in years</label>
+                <input type="number" id="dailyTime" class="form-control">
+              </div>
+              <div class="col-md-3"><button class="mt-4 btn btn-secondary w-100" id="dailyComInterestEqualsBtn">=</button></div>
+              <div id="dailyComInterestResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF SUM OF PERFECT SQUARES -->
+          <div class="box" data-response="diagonalSquare">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              <img src="./img/diagonalSq.png" alt="diagonal of a square" class="float-end">
+              The diagonal of a square is a line segment that joins any two non-adjacent vertices. A square has two diagonals that are equal in length and bisect each other at right angles. The diagonal of square formula is used to calculate the length of the diagonal of a square when its side length is known. <br>
+              The diagonal of a square formula is, <b class="fw-bold"> d = a√2; where 'd' is the diagonal and 'a' is the side of the square.</b>
+              </div><hr>
+              <div class="col-md-4">
+                <label class="mb-1" for="diagonalLengthSq">Enter length of a side (cm)</label>
+                <input type="number" id="diagonalLengthSq" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="diagonalSquareEqualsBtn">=</button></div>
+              <div id="diagonalSquareResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF DIAGONAL OF A SQUARE -->
+          <div class="box" data-response="diagonalRectangle">
+            <div class="row">
+              <div class="col-md-12 lead mb-2">
+              <img src="./img/diagonalRect.png" alt="diagonal of a rectangle" class="float-end">
+              The diagonal of a rectangle is a line segment that joins any two of its non-adjacent vertices. In the following rectangle, AC and BD are the diagonals. You can see that the lengths of both AC and BD are the same. A diagonal cuts a rectangle into 2 right triangles The length of diagonals of a rectangle can be calculated as, <b class="fw-bold">d = √( l<sup>2</sup> + w<sup>2</sup>) </b> <br>
+              where l = length of the rectangle and w = width of the rectangle
+              </div><hr>
+              <div class="col-md-4">
+                <label class="mb-1" for="diagonalLengthRect">Enter length of the rectangle (cm)</label>
+                <input type="number" id="diagonalLengthRect" class="form-control">
+              </div>
+              <div class="col-md-4">
+                <label class="mb-1" for="diagonalWidthRect">Enter width of the rectangle (cm)</label>
+                <input type="number" id="diagonalWidthRect" class="form-control">
+              </div>
+              <div class="col-md-4"><button class="mt-4 btn btn-secondary w-100" id="diagonalRectangleEqualsBtn">=</button></div>
+              <div id="diagonalRectangleResult" class="col-md-12 mt-2 alert alert-success hide"></div>
+            </div>
+          </div><!--END OF DIAGONAL OF A RECTANGLE -->
+     </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
